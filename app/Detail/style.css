@@ -1,0 +1,117 @@
+.detail_contanier {
+  display: flex;
+  flex-direction: column;
+  max-width: 430px;
+  flex-wrap: nowrap;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 430px;
+  max-height: 35px;
+}
+
+.FaChevronLeft {
+  width: 40px;
+  height: 25px;
+}
+
+.detail_header00 {
+  width: 300px;
+}
+
+.detail_header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  max-height: 35px;
+}
+
+.main_img {
+  border-radius: 10px;
+}
+/* ================================= */
+
+section span {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+section p {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.main_header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 280px;
+  margin: 10px auto 0 auto;
+}
+
+.전체회자 {
+  color: #03c75a;
+  width: 70px;
+  height: 50px;
+  border-bottom: 3px solid #03c75a;
+  font-weight: 800;
+}
+
+.전체_p {
+  font-weight: 800;
+}
+
+aside {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  margin-top: 7px;
+}
+
+aside p {
+  font-size: 12px;
+}
+
+main {
+  max-height: 370px;
+}
+
+.main_section {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  overflow-y: auto;
+  height: 85px;
+  flex-wrap: wrap;
+  border-bottom: 0.3px solid gray;
+}
+
+.main_section::-webkit-scrollbar {
+  height: 150px;
+  display: none;
+}
+
+.main_section::-webkit-scrollbar {
+  width: 430px;
+  display: none;
+}
+
+.main_span {
+  margin-left: 10px;
+}
+
+.main_span_p {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.main_span_pp {
+  font-size: 12px;
+  font-weight: 200;
+  margin-top: -10px;
+}
