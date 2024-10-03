@@ -3,22 +3,22 @@
 import React, {useState} from 'react';
 import './style.css';
 import Image from 'next/image';
-import {FaChevronLeft} from 'react-icons/fa';
+
 import {GoPlusCircle} from 'react-icons/go';
-import {CiMenuKebab} from 'react-icons/ci';
+
+import Nav from './nav';
 
 export default function Detail() {
   const [episodes] = useState<number[]>([1, 2, 3, 4, 5]);
   return (
     <div className="detail_contanier">
-      <header>
+      <header className="header">
         <div className="detail_header00">
-          <FaChevronLeft className="FaChevronLeft" />
+          <Nav />
         </div>
         <div className="detail_header">
           <GoPlusCircle className="FaChevronLeft" />
           <p>관심</p>
-          <CiMenuKebab className="FaChevronLeft" />
         </div>
       </header>
       <section>
@@ -42,14 +42,8 @@ export default function Detail() {
       </section>
       <main>
         <header className="main_header">
-          <div className="전체회자">
-            <p></p>전체 회차
-          </div>
-          <p className="전체_p">관련 작품</p>
+          <p>전체 회차</p>
         </header>
-        <aside>
-          <p>4개의 미리보기가 있습니다...</p>
-        </aside>
         {episodes.map(v => (
           <section className="main_section" key={v}>
             <Image

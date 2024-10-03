@@ -1,6 +1,7 @@
 .Main_container {
   display: flex;
   flex-direction: column;
+  height: 100%;
   flex-wrap: nowrap;
 }
 
@@ -166,4 +167,45 @@ main header p {
   margin-top: 0;
   text-align: left;
   width: 110px;
+}
+
+/* @media (max-width: 390px) and (max-height: 844px) {
+  .Main_container {
+    max-width: 100%;
+    max-height: 100%;
+    padding-left: 100px;
+    margin: 0 10px;
+  }
+} */
+/* 미디어 쿼리 추가 */
+@media (max-width: 390px) and (max-height: 844px) {
+  .Main_header,
+  .main_div,
+  .main_container {
+    max-width: 100%; /* 너비를 100%로 설정 */
+    margin: 0; /* 마진 제거 */
+    padding: 10px; /* 여백 추가 */
+  }
+
+  .Main_header {
+    flex-direction: column; /* 세로 방향으로 변경 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+  }
+
+  .main_container {
+    flex-direction: column; /* 세로 방향으로 변경 */
+    max-height: 100%; /* 최대 높이를 100%로 설정 */
+  }
+
+  section {
+    width: 100%; /* 섹션 너비를 100%로 설정 */
+  }
+
+  footer h1 {
+    font-size: 40px; /* 폰트 크기 조정 */
+  }
+
+  footer p {
+    margin-top: 10px; /* 마진 조정 */
+  }
 }

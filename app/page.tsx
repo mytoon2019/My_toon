@@ -2,10 +2,7 @@
 
 import {useState} from 'react';
 import './main.css';
-import {CiSearch} from 'react-icons/ci';
-import {FaChevronRight} from 'react-icons/fa';
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function Home() {
   //반복하기 이건 나중에 실제 api로 변경할 것
@@ -13,6 +10,12 @@ export default function Home() {
   // 22
   // const [webtoon_num] = useState<number[]>([1, 2, 3, 4]);
   const [days] = useState<string[]>(['월', '화', '수', '목', '금', '토', '일']);
+
+  //디테일 페이지로 이동
+  const Detail_page = () => {
+    window.location.href = '/Detail';
+    console.log('클릭됨');
+  };
 
   return (
     <div className="Main_container">
@@ -25,34 +28,34 @@ export default function Home() {
           width={140}
           height={220}
         />
-        <p className="header_p">알아서 딱! ▾</p>
-        <CiSearch className="icon_ci" />
+        <p className="header_p">사용자 이름</p>
+        <p className="icon_ci"></p>
       </header>
       {/* 추천 부분 */}
       <header className="section_header">
         <span>지금! 인기 급상승</span>
-        <p>TOP 30</p>
-        <FaChevronRight className="section_icon" />
+        <p>TOP 8</p>
+        {/* <FaChevronRight className="section_icon" /> */}
+        <p className="section_icon"></p>
       </header>
       <div className="sec_div">
         {recom_toons.map(v => (
           <section key={v}>
-            <Link href="/Detail">
-              <article>
-                <Image
-                  src="/w10.jpg"
-                  alt="웹툰 이미지"
-                  width={140}
-                  height={160}
-                  className="article_Image"
-                />
+            <article>
+              <Image
+                onClick={Detail_page}
+                src="/w10.jpg"
+                alt="웹툰 이미지"
+                width={140}
+                height={160}
+                className="article_Image"
+              />
 
-                <footer>
-                  <h1>{v}</h1>
-                  <p>웹툰 제목</p>
-                </footer>
-              </article>
-            </Link>
+              <footer>
+                <h1>{v}</h1>
+                <p>웹툰 제목</p>
+              </footer>
+            </article>
           </section>
         ))}
       </div>
@@ -70,6 +73,7 @@ export default function Home() {
           {recom_toons.map(v => (
             <section key={v}>
               <Image
+                onClick={Detail_page}
                 src="/w10.jpg"
                 alt="웹툰 이미지"
                 width={120}

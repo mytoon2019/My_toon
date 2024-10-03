@@ -1,15 +1,20 @@
 'use client';
-import Link from 'next/link';
-import {usePathname} from 'next/navigation';
+
+import Image from 'next/image';
 
 export default function Navigate() {
-  const path = usePathname();
+  const mypage = () => {
+    window.location.href = '/MyPage';
+    console.log('클릭됨');
+  };
   return (
-    <div>
-      <Link href="/">{path === '/' ? 'ggg' : 'bbb'}</Link>
-      <Link href="/">{path === '/' ? 'ggg' : 'bbb'}</Link>
-      <Link href="/">{path === '/' ? 'ggg' : 'bbb'}</Link>
-      <Link href="/">{path === '/' ? 'ggg' : 'bbb'}</Link>
-    </div>
+    <Image
+      onClick={mypage}
+      src="/b4.jpg"
+      alt="웹툰 이미지"
+      width={80}
+      height={80}
+      style={{marginBottom: -6}}
+    />
   );
 }

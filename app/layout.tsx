@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import Image from 'next/image';
+import Navigate from '../components/navigate';
 
 export const metadata: Metadata = {
   title: 'Mytoon2019',
@@ -22,24 +23,16 @@ export default function RootLayout({
             alt="웹툰 이미지"
             width={65}
             height={65}
-            style={{marginBottom: 5}}
+            style={{marginBottom: 5, marginLeft: 30}}
           />
-          <Image src="/b2.jpg" alt="웹툰 이미지" width={80} height={80} />
+          <Navigate />
           <Image
-            src="/b3.png"
+            src="/b5.jpg"
             alt="웹툰 이미지"
             width={80}
             height={80}
-            style={{marginBottom: -6}}
+            style={{marginRight: 30}}
           />
-          <Image
-            src="/b4.jpg"
-            alt="웹툰 이미지"
-            width={80}
-            height={80}
-            style={{marginBottom: -6}}
-          />
-          <Image src="/b5.jpg" alt="웹툰 이미지" width={80} height={80} />
         </footer>
       </body>
     </html>
