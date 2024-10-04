@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 import './globals.css';
 import Image from 'next/image';
 import Navigate from '../components/navigate';
+import HomeNav from '../components/homeNav';
 
 export const metadata: Metadata = {
   title: 'Mytoon2019',
@@ -18,13 +19,7 @@ export default function RootLayout({
       <body>
         {children}
         <footer className="main_footer">
-          <Image
-            src="/b0.jpg"
-            alt="웹툰 이미지"
-            width={65}
-            height={65}
-            style={{marginBottom: 5, marginLeft: 30}}
-          />
+          <HomeNav />
           <Navigate />
           <Image
             src="/b5.jpg"

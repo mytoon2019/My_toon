@@ -1,0 +1,87 @@
+/* 전체 컨테이너 */
+.Mypage_container {
+  display: flex;
+  flex-direction: column;
+  width: 430px;
+}
+
+/* 헤더부분 */
+.MP_header {
+  display: flex;
+  flex-direction: column;
+}
+
+.MP_h_top {
+  padding-left: 20px;
+  border-bottom: 0.3px solid gray;
+}
+
+.MP_h_bottom {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 0.3px solid gray;
+  align-items: center;
+  justify-content: center;
+}
+
+.MP_h_bottom h4 {
+  margin-right: 30px;
+}
+
+.MP_h_bottom_title {
+  margin-right: 30px;
+  color: #09aa5c;
+  font-weight: 900;
+}
+
+.MP_h_bottom_Nooo_title {
+  margin-right: 30px;
+  font-weight: 500;
+}
+
+/* 메인 부분 */
+.MP_main {
+  display: flex;
+  flex-direction: column;
+  height: 660px;
+  overflow-y: auto;
+}
+
+.main_section {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  height: 85px;
+  flex-wrap: wrap;
+  border-bottom: 0.3px solid gray;
+}
+
+main::-webkit-scrollbar {
+  height: 500px;
+  display: none;
+}
+
+main::-webkit-scrollbar {
+  width: 430px;
+  display: none;
+}
+
+.main_span {
+  margin-left: 10px;
+  height: 120px;
+}
+
+.main_span_p {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.main_span_pp {
+  font-size: 12px;
+  font-weight: 200;
+  margin-top: -10px;
+}
+
+Image {
+  border-radius: 15px;
+}

@@ -1,0 +1,68 @@
+.Login_container {
+  display: flex;
+  flex-direction: column;
+  width: 430px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  color: #09aa5c;
+  font-weight: w400;
+}
+
+.Login_main {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  align-items: center;
+  justify-content: center;
+}
+
+.Login_id {
+  width: 400px;
+  height: 60px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border: 1px solid #c5ccd2;
+}
+
+.Login_pw {
+  width: 400px;
+  height: 60px;
+  border-bottom-left-radius: 15px;
+  margin-bottom: 30px;
+  border-bottom-right-radius: 15px;
+  border: 1px solid #c5ccd2;
+}
+
+main button {
+  width: 400px;
+  height: 60px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  background-color: #a5adb8;
+  border-radius: 15px;
+  border: 1px solid #a5adb8;
+}
+
+footer {
+  height: 280px;
+}
+
+footer p,
+h4,
+aside {
+  text-align: center;
+}
+
+.SiGithub {
+  margin-right: 60px;
+}
+
+h4 {
+  font-size: 24px;
+  color: #a5adb8;
+}

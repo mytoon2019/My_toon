@@ -55,7 +55,7 @@ export default function Detail() {
             />
             <span className="main_span">
               <p className="main_span_p">화</p>
-              <p className="main_span_pp">평점 / 날짜</p>
+              <p className="main_span_pp">날짜</p>
             </span>
           </section>
         ))}
