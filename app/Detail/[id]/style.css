@@ -35,15 +35,22 @@
   border-radius: 10px;
 }
 /* ================================= */
+section {
+  padding-left: 10px;
+}
 
 section span {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 900;
 }
 
 section p {
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 600;
+  overflow: auto;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  width: 360px;
 }
 
 .main_header {
@@ -63,7 +70,7 @@ aside p {
 }
 
 main {
-  height: 400px;
+  height: 310px;
   overflow-y: auto;
 }
 
@@ -109,12 +116,38 @@ main::-webkit-scrollbar {
 .btn_input {
   height: 50px;
   width: 380px;
-  border-top: 1px solid white;
+  border: 1px solid white;
+  border-top-color: grey;
 }
 
 .btn_btn {
   width: 50px;
-  height: 50px;
+  height: 54px;
   border: 1px solid white;
+  border-top-color: grey;
   background-color: white;
+}
+
+.comment_detail {
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  border-bottom: 1px solid grey;
+}
+
+.comment_detail_h4 {
+  margin: 10px 0 0 10px;
+}
+
+.comment_detail_p {
+  margin: 10px 0 10px 10px;
+}
+
+.loading {
+  text-align: center;
+  font-weight: 900;
+}
+
+.none_footer {
+  height: 80px;
 }

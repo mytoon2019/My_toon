@@ -21,7 +21,16 @@ const Header_container = styled.div`
 const Main_container = styled.div`
   display: flex;
   flex-direction: column;
-  height: 660px;
+  height: 620px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  border-top: 1px solid grey;
+
+  &::-webkit-scrollbar {
+    width: 430px;
+    display: none;
+  }
 `;
 
 const Btn_container = styled.div`
@@ -31,7 +40,6 @@ const Btn_container = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 50px;
-  border: 1px solid grey;
   margin-bottom: 40px;
 `;
 
@@ -47,7 +55,18 @@ export default function Comment_page() {
       </Header_container>
       <Main_container>
         {comment_list.map(v => (
-          <div key={v}>{v}</div>
+          <div className="comment_detail" key={v}>
+            <h4
+              className="comment_detail_h4
+            ">
+              {v}
+            </h4>
+            <p
+              className="comment_detail_p
+             ">
+              여기에 댓글 쓴 내용
+            </p>
+          </div>
         ))}
       </Main_container>
       <Btn_container>

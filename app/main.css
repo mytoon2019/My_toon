@@ -144,11 +144,12 @@ main header p {
   display: flex;
   flex-direction: row;
   max-width: 430px;
-  max-height: 440px;
+  max-height: 400px;
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: wrap;
   overflow-y: auto;
+  margin-bottom: 20px;
 }
 
 .main_container section {
@@ -163,10 +164,28 @@ main header p {
 }
 
 .toon_p {
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 0;
   text-align: left;
   width: 110px;
+  font-weight: 800;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.none_footer {
+  height: 80px;
+}
+
+.bold_today {
+  color: #03c75a;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.Noooooo_bold_today {
+  color: black;
 }
 
 /* 반응형 추가 */
