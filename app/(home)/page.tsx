@@ -5,6 +5,7 @@ import './main.css';
 import Image from 'next/image';
 import axios from 'axios';
 import {API_URL} from '@/components/api';
+import '../globals.css';
 
 // 웹툰 객체의 타입 정의
 interface data_type {
@@ -61,6 +62,7 @@ export default function Home() {
           className="cookie_img"
           width={140}
           height={220}
+          priority
         />
         <p className="header_p">사용자 이름</p>
         <p className="icon_ci"></p>
@@ -76,6 +78,7 @@ export default function Home() {
         {recom_toons.map(v => (
           <section key={v}>
             <article>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 // onClick={Detail_page}
                 src="/w10.jpg"
@@ -105,23 +108,10 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="main_container">
-          {/* <section>dasdsa</section> */}
-          {/* {recom_toons.map(v => (
-            <section key={v}>
-              <Image
-                onClick={Detail_page}
-                src="/w10.jpg"
-                alt="웹툰 이미지"
-                width={120}
-                height={140}
-                className="article_Image"
-              />
-              <p className="toon_p">웹툰제목</p>
-            </section>
-          ))} */}
+        <div className="main_container0">
           {show_toon_list.map(toon => (
             <section key={toon.id} onClick={() => Detail_page(toon.id)}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={toon.thumb}
                 alt="웹툰 이미지"
@@ -137,7 +127,6 @@ export default function Home() {
           ))}
         </div>
       </main>
-      <footer className="none_footer"></footer>
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import Image from 'next/image';
-import Navigate from '../components/navigate';
-import HomeNav from '../components/homeNav';
+import Navigate from '../components/home/navigate';
+import HomeNav from '../components/home/homeNav';
 
 export const metadata: Metadata = {
   title: 'Mytoon2019',

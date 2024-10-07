@@ -1,8 +1,8 @@
 .detail_contanier {
   display: flex;
   flex-direction: column;
-  width: 430px;
-  flex-wrap: wrap;
+  height: 100%;
+  flex-wrap: nowrap;
 }
 
 .header {
@@ -20,7 +20,7 @@
 }
 
 .detail_header00 {
-  width: 300px;
+  width: 240px;
 }
 
 .detail_header {
@@ -35,22 +35,26 @@
   border-radius: 10px;
 }
 /* ================================= */
-section {
+.header_section {
   padding-left: 10px;
 }
 
-section span {
+.header_section span {
   font-size: 18px;
   font-weight: 900;
 }
 
-section p {
+.header_section p {
   font-size: 12px;
   font-weight: 600;
   overflow: auto;
   text-overflow: ellipsis;
-  white-space: wrap;
+  white-space: nowrap;
   width: 360px;
+}
+
+.header_section p::-webkit-scrollbar {
+  display: none;
 }
 
 .main_header {
@@ -70,7 +74,7 @@ aside p {
 }
 
 main {
-  height: 310px;
+  max-height: 510px;
   overflow-y: auto;
 }
 
@@ -79,12 +83,12 @@ main {
   flex-direction: row;
   padding: 10px;
   height: 85px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   border-bottom: 0.3px solid gray;
 }
 
 main::-webkit-scrollbar {
-  height: 500px;
+  max-height: 440px;
   display: none;
 }
 
@@ -104,7 +108,7 @@ main::-webkit-scrollbar {
 
 .main_span_pp {
   font-size: 12px;
-  font-weight: 200;
+  font-weight: 600;
   margin-top: -10px;
 }
 
@@ -146,8 +150,4 @@ main::-webkit-scrollbar {
 .loading {
   text-align: center;
   font-weight: 900;
-}
-
-.none_footer {
-  height: 80px;
 }

@@ -11,6 +11,7 @@ export default function Mypage() {
   const titleClick = () => {
     setsaveToon(!saveToon);
   };
+
   return (
     <div className="Mypage_container">
       {/* 헤더부분 */}

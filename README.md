@@ -7,6 +7,8 @@
 - styled-components
 - axios
 
+# [파일별 설명 보기](./content.md)
+
 ![메인 이미지](/img/메인.png)
 ![에피소드 이미지](/img/에피소드.png)
 ![My페이지](/img/My페이지.png)

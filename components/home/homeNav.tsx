@@ -12,8 +12,8 @@ export default function HomeNav() {
       src="/b0.jpg"
       alt="웹툰 이미지"
       width={65}
-      height={65}
-      style={{marginBottom: 5, marginLeft: 30}}
+      height={70}
+      style={{marginBottom: 0, marginLeft: 30}}
     />
   );
 }
