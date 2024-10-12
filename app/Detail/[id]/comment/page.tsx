@@ -3,7 +3,7 @@
 import styled from 'styled-components';
 import {FaChevronLeft} from 'react-icons/fa';
 import '../style.css';
-import Link from 'next/link';
+// import Link from 'next/link';
 import {useState} from 'react';
 
 const Comment_page_container = styled.div`
@@ -33,25 +33,30 @@ const Main_container = styled.div`
   }
 `;
 
-const Btn_container = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 430px;
-  align-items: center;
-  justify-content: space-between;
-  height: 50px;
-  margin-bottom: 40px;
-`;
+const Detail_page = (id: string) => {
+  window.location.href = `/Detail/${id}`;
+  console.log('클릭됨', id);
+};
 
-export default function Comment_page() {
+export default function Comment_page({
+  //id값 가져오기
+  params: {id},
+}: {
+  params: {id: string};
+}) {
+  console.log('댓글 달 id값은', id);
+
   const [comment_list] = useState<number[]>([1, 2, 3, 4, 5, 6, 7]);
 
   return (
     <Comment_page_container>
       <Header_container>
-        <Link href="/Detail">
-          <FaChevronLeft className="GoPlusCircle" />
-        </Link>
+        {/* <Link href="/Detail/[id]"> */}
+        <FaChevronLeft
+          className="GoPlusCircle"
+          onClick={() => Detail_page(id)}
+        />
+        {/* </Link> */}
       </Header_container>
       <Main_container>
         {comment_list.map(v => (
@@ -69,12 +74,12 @@ export default function Comment_page() {
           </div>
         ))}
       </Main_container>
-      <Btn_container>
+      <div className="Btn_container">
         <input
           placeholder="댓글을 입력해주세요:)"
           className="btn_input"></input>
         <button className="btn_btn">등록</button>
-      </Btn_container>
+      </div>
     </Comment_page_container>
   );
 }

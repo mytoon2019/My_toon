@@ -1,19 +1,16 @@
 'use client';
 
-import Image from 'next/image';
+import {IoIosHome} from 'react-icons/io';
 
 export default function HomeNav() {
   const home_direction = () => {
     window.location.href = '/';
   };
+
   return (
-    <Image
+    <IoIosHome
       onClick={home_direction}
-      src="/b0.jpg"
-      alt="웹툰 이미지"
-      width={65}
-      height={70}
-      style={{marginBottom: 0, marginLeft: 30}}
+      style={{marginBottom: 0, marginLeft: 30, width: 45, height: 45}}
     />
   );
 }

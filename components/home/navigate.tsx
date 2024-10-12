@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import {CgProfile} from 'react-icons/cg';
 
 export default function Navigate() {
   const mypage = () => {
@@ -8,13 +8,9 @@ export default function Navigate() {
     console.log('클릭됨');
   };
   return (
-    <Image
+    <CgProfile
       onClick={mypage}
-      src="/b4.jpg"
-      alt="웹툰 이미지"
-      width={80}
-      height={80}
-      style={{marginBottom: -6}}
+      style={{marginBottom: -6, width: 45, height: 45}}
     />
   );
 }

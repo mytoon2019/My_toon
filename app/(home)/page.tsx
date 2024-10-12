@@ -71,8 +71,6 @@ export default function Home() {
       <header className="section_header">
         <span>지금! 인기 급상승</span>
         <p>TOP 8</p>
-        {/* <FaChevronRight className="section_icon" /> */}
-        <p className="section_icon"></p>
       </header>
       <div className="sec_div">
         {recom_toons.map(v => (

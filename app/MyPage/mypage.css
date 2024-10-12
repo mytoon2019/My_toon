@@ -85,3 +85,13 @@ main::-webkit-scrollbar {
 Image {
   border-radius: 15px;
 }
+
+@media (max-width: 395px) {
+  .MP_h_top {
+    padding-left: 40px;
+  }
+
+  .main_section {
+    padding-left: 20px;
+  }
+}

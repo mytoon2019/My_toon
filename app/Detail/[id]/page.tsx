@@ -76,7 +76,10 @@ export default function Detail({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
-  //실제 웹툰 사이트로 이동
+  const comment_page = (id: string) => {
+    window.location.href = `/Detail/${id}/comment`;
+    console.log('클릭됨');
+  };
 
   return (
     <div className="detail_contanier">
@@ -85,8 +88,11 @@ export default function Detail({
           <Nav />
         </div>
         <div className="detail_header">
-          <MdOutlineComment className="FaChevronLeft" />
-          <p>댓글</p>
+          <MdOutlineComment
+            className="FaChevronLeft"
+            onClick={() => comment_page(id)}
+          />
+          <p onClick={() => comment_page(id)}>댓글</p>
           <GoPlusCircle className="FaChevronLeft" />
           <p>관심</p>
         </div>

@@ -66,3 +66,20 @@ h4 {
   font-size: 24px;
   color: #a5adb8;
 }
+
+@media (max-width: 395px) {
+  .Login_container {
+    width: 390px;
+  }
+
+  .Login_main {
+    width: 360px;
+    margin: 0 auto;
+  }
+
+  .Login_id,
+  .Login_pw,
+  main button {
+    width: 350px;
+  }
+}

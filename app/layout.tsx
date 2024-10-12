@@ -1,8 +1,8 @@
 import type {Metadata} from 'next';
 import './globals.css';
-import Image from 'next/image';
 import Navigate from '../components/home/navigate';
 import HomeNav from '../components/home/homeNav';
+import {TiThMenuOutline} from 'react-icons/ti';
 
 export const metadata: Metadata = {
   title: 'Mytoon2019',
@@ -21,13 +21,7 @@ export default function RootLayout({
         <footer className="main_footer">
           <HomeNav />
           <Navigate />
-          <Image
-            src="/b5.jpg"
-            alt="웹툰 이미지"
-            width={80}
-            height={80}
-            style={{marginRight: 30}}
-          />
+          <TiThMenuOutline style={{marginRight: 30, width: 45, height: 45}} />
         </footer>
       </body>
     </html>
